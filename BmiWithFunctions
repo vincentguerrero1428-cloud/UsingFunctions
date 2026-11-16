@@ -1,0 +1,39 @@
+#include<stdio.h>
+    
+float CalculateBmi(float weight, float height);
+
+    float CalculateBmi(float weight, float height){
+        
+        float result= weight/(height*height);
+        return result;
+    }
+
+    int main()
+{
+    float weight, height, result;
+
+        printf("Enter weight: ");
+        scanf("%f", &weight);
+
+        printf("Enter height: ");
+        scanf("%f", &height);
+
+        if(weight<=0||height<=0){
+            printf("\nINVALID INPUTS!");
+        }
+
+        else{
+        float output= CalculateBmi(weight, height);
+              printf("\nBMI: %.2f", output);
+        }
+
+        if(result>=50){
+            printf("\nClass: Overweight", result);
+        }
+
+        else{
+            printf("\nClass: Underweight", result);
+        }
+           
+    return 0;
+}
